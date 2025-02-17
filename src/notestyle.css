@@ -1,0 +1,53 @@
+body {
+    background-color: #2a2a2a;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.notepad-container {
+    text-align: center;
+}
+
+.back-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 40px; 
+    justify-content: flex-start; /* Menyusun elemen-elemen di tengah container */
+    width: 100%;
+    max-height: 200%;
+    overflow-y: auto;
+    -webkit-app-region: no-drag;
+}
+
+.note {
+    width: 150px;
+    height: 200px;
+    background-color: #e0e0e0;
+    margin: 10px 10px 10px 0; /* Mengatur margin kanan dan bawah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-note {
+    background-color: #444;
+    color: white;
+}

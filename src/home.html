@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Electron App</title>
+  <link rel="stylesheet" href="homestyle.css">
+  <link rel="stylesheet" href="todostyle.css">
+  <link rel="stylesheet" href="notestyle.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h3>LOGOTYPE</h3>
+      <ul>
+        <li>
+          <button id="home-btn" class="active">
+            <span class="icon"></span>
+            <span class="text">Home</span>
+          </button>
+        </li>
+        <li>
+          <button id="todo-btn">
+            <span class="icon"></span>
+            <span class="text">ToDoList</span>
+          </button>
+        </li>
+        <li>
+          <button id="notepad-btn">
+            <span class="icon"></span>
+            <span class="text">NotePad</span>
+          </button>
+        </li>
+        <li>
+          <button id="savings-btn">
+            <span class="icon"></span>
+            <span class="text">Savings</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+    <div class="content" id="content">
+      <div id="home-content" class="show">
+        <h1>HOME</h1>
+        <div class="cards">
+          <div class="card">
+            <h2>ToDoList</h2>
+          </div>
+          <div class="card">
+            <h2>NotePad</h2>
+          </div>
+          <div class="card">
+            <h2>Savings</h2>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="todo-content" style="display: none;">
+        <h1>TO DO LIST</h1>
+        <div class="todo-container">
+          <div class="button-container">
+            <button id="addDayBtn">+</button>
+            <button id="removeDayBtn">-</button>
+          </div>
+        </div>
+      <div id="todoListContainer"></div>
+      </div>
+
+
+      <div id="notepad-content" style="display: none;">
+        <h1>NOTEPAD</h1>
+        <div class="notepad-container">
+            <button class="back-button">Back</button>
+            <div class="notes-container">
+                <div class="note add-note" onclick="addNote()">+</div>
+            </div>
+        </div>
+      </div>
+
+
+      <div id="savings-content" style="display: none;">
+        <h1>SAVINGS</h1>
+        <!-- Konten Savings -->
+      </div>
+    </div>
+  </div>
+
+  <script src="homescript.js"></script>
+  <script src="todoscript.js"></script>
+  <script src="notescript.js"></script>
+</body>
+</html>

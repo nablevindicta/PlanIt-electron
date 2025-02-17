@@ -1,0 +1,151 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    /* text-align: center; */
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Jarak antara tombol */
+    margin-bottom: 20px;
+    -webkit-app-region: no-drag;
+}
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#todoListContainer {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; /* Menyusun elemen-elemen di tengah container */
+    width: 100%;
+    max-height: 200%;
+    overflow-y: auto;
+    -webkit-app-region: no-drag;
+}
+
+.todo-list {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px); /* Lebar setiap hari */
+    min-width: 250px; /* Lebar minimum */
+    color: black;
+    margin-bottom: 20px; /* Jarak antara baris */
+    text-align: center;
+}
+
+.todo-list h2 {
+    margin-bottom: 10px;
+}
+
+.todo-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.todo-list li span {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.todo-list input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.todo-list button {
+    padding: 10px 20px;
+    background-color: #616161;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.todo-list button:hover {
+    background-color: #363636;
+}
+
+.todo-list {
+    position: relative; /* Agar child element bisa menggunakan absolute positioning */
+}
+
+.todo-list .remove-btn {
+    padding: 5px 5px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute; /* Menggunakan absolute positioning */
+    top: 5px; /* Jarak dari atas */
+    right: 5px; /* Jarak dari kanan */
+}
+
+.todo-list .remove-btn:hover {
+    background-color: #353535;
+}
+
+#addDayBtn, #removeDayBtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#addDayBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#addDayBtn:hover {
+    background-color: #45a049;
+}
+
+#removeDayBtn {
+    background-color: #f44336;
+    color: white;
+}
+
+#removeDayBtn:hover {
+    background-color: #da190b;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #222;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #222;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #a0a0a0;
+}
